@@ -1,0 +1,16 @@
+dist: trusty
+sudo: required
+addons:
+  apt:
+    packages:
+    - qemu
+    - qemu-user-static
+    - binfmt-support
+    - parted
+    - wget
+    - dosfstools
+    - zip
+script:
+- sudo bash ci/create-image
+- xz -z rpizw-rover.img -c > irrigatron.img.xz
+- zip irrigatron.img.zip irrigatron.img

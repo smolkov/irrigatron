@@ -1,0 +1,43 @@
+- year = Date.today.year
+- month = Date.today.month
+- day = Date.today.day
+
+// ------------- Try a custom date:
+//- year = 2014
+//- month = 1
+//- day = 31
+
+- today = Date.new(year,month,day).strftime("<div class='day-week'>%A</div><div class='day-num'>%d</div>")
+- monthFull = Date.new(year,month).strftime("%B")
+- monthEnd = Integer(Date.new(year, month, -1).strftime("%d"))
+- monthStart = Date.new(year, month, 1).strftime("%a")
+- @days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+- hashDays = Hash[@days.map.with_index.to_a]
+- monthStartNum = hashDays[monthStart]
+- adjustMonthStartNum = -monthStartNum + 1 
+
+%div.container
+  %div.today
+    %div.date
+    = today
+  %div.calendar
+    %div.month
+      = monthFull
+      = year
+    %ul.weekdays
+      - @days.each do |i|
+        %li.weekday
+          = i[0]
+    %ul.week
+      - (adjustMonthStartNum...monthEnd + 1).each do |i|
+        - if i == day
+          %li.day.now
+            = i
+        - else
+          %li.day
+            - if i > 0
+              - if i < day
+                %span.mute
+                  = i
+              - else
+                = i

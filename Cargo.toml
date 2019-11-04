@@ -1,0 +1,68 @@
+[package]
+name = "irrigatron"
+version = "0.0.2"
+authors = ["Irrigatron Junior"]
+edition = "2018"
+readme = "README.md"
+
+[dependencies]
+# failure = "0.1.5"
+# log
+log = "0.4.8"
+femme = "1.2.0"
+embedded-graphics = "0.4"
+linux-embedded-hal = "0.2"
+profont = "0.1"
+ssd1675 = { version = "0.1", git = "https://github.com/wezm/ssd1675.git", branch = "busy-wait" }
+# bigdecimal = { version = "0.1.0", features = ["serde"] }
+# env_logger = "0.6.2"
+# facade = { git = "ssh://git@github.com/DenisKolodin/facade", features = ["refresh"] }
+# naive = "0.1.1"
+# runtime-tokio = "0.3.0-alpha.5"
+serde = { version = "1.0.99", features = ["derive"] }
+serde_json = "1.0.40"
+
+# tokio-tungstenite = "0.9.0"
+tungstenite = "0.9.1"
+# nix = "0.15.0"
+rs-release = "0.1"
+url = "2.1.0"
+url_serde = "0.2.0"
+systemstat = "0.1.4"
+# Metrics
+metrics = "0.11.1"
+metrics-core = "0.5.1"
+metrics-runtime = { version = "0.1.0", default-features = false, features = ["metrics-observer-prometheus"] }
+heim = "0.0.6"
+# path table.
+path-table = "1.0.0"
+path-tree = "0.1.8"
+# RestAPi Async
+futures-preview = { version = "0.3.0-alpha.18", features = [ "async-await", "nightly" ] }
+async-std = "0.99.4"
+async-log = "*"
+tide = {git = "https://github.com/rustasync/tide.git"}
+http = "0.1.18"
+
+#  Database&KV
+# sled = "0.26.3"
+# memdb = "1.0.0"
+# graphql_client = "0.8.0"
+# juniper = "0.13.1"
+# diesel = { version = "1.4.2", default-features = false, features = ["r2d2", "sqlite"] }
+# diesel_derives = "1.4.0"
+
+
+
+ansi_term = "0.12.0"
+structopt = "0.3.0"
+rand = "0.7.0"
+atty = "0.2.13"
+
+# automata = {git = "https://github.com/smolkov/automata.git"}
+qrcode = "0.11.0"
+nix = "0.15.0"
+include-flate = "0.1.3"
+semval = "0.1.0"
+cron = "0.6.0"
+lazy_static = "1.4.0"
