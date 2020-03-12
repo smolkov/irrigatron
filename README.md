@@ -29,7 +29,7 @@
       Configure sensor for user.
 
     ```
-    wqa config --uart=2 --path=`test1`
+    irrigatron config --uart=2 --path=`test1`
     ```
 
   - ### 🔬 🕵️‍♀️ `check`: run this command to confirm that your configuration is appropriately set up.
